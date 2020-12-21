@@ -1,11 +1,11 @@
 package init;
 
-import org.testng.annotations.AfterMethod;
+/*import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.Test;*/
 
 public class ParallelMethodTest {
-    @BeforeMethod
+   /* @BeforeMethod
     public void beforeMethod() {
         long id = Thread.currentThread().getId();
         System.out.println("Before test-method. Thread id is: " + id);
@@ -27,5 +27,5 @@ public class ParallelMethodTest {
     public void afterMethod() {
         long id = Thread.currentThread().getId();
         System.out.println("After test-method. Thread id is: " + id);
-    }
+    }*/
 }

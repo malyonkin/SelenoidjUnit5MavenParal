@@ -6,14 +6,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
-import java.net.URI;
-import java.util.Map;
 
 public class seleniumjUnit5ParalClassChromeTest {
 
@@ -24,7 +20,7 @@ public class seleniumjUnit5ParalClassChromeTest {
 
         //ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
 
-        DesiredCapabilities capabilities = new DesiredCapabilities();
+        /*DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("browserName", "chrome");
         capabilities.setCapability("browserVersion", "87.0");
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -36,7 +32,7 @@ public class seleniumjUnit5ParalClassChromeTest {
         RemoteWebDriver driver = new RemoteWebDriver(
                 URI.create("http://localhost:4444/wd/hub").toURL(),
                 capabilities
-        );
+        );*/
     }
 
     @Test

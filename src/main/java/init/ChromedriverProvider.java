@@ -8,8 +8,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URI;
 
-public class ChromedriverProvider implements WebDriverProvider {
-    @Override
+public class ChromedriverProvider implements WebDriverProvider { //https://github.com/kpavlov/selenide-maven-sample/blob/master/pom.xml
+    @Override //https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html
     public WebDriver createDriver(DesiredCapabilities desiredCapabilities) {
         DesiredCapabilities capabilities = new DesiredCapabilities(desiredCapabilities);
         capabilities.setBrowserName("chrome");

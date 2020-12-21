@@ -1,4 +1,4 @@
-package com.holi;
+package tests;
 
 import com.codeborne.selenide.Configuration;
 import init.CustomProviderChrome;
@@ -6,11 +6,14 @@ import init.CustomProviderFirefox;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Selenide.*;
 
-public class selenideTest { //https://www.browserstack.com/guide/difference-between-selenium-remotewebdriver-and-webdriver
+//https://bonigarcia.github.io/selenium-jupiter/
+//https://www.browserstack.com/guide/difference-between-selenium-remotewebdriver-and-webdriver
+class selenideTest {
 
     @BeforeEach
     public void setUp() {
@@ -20,17 +23,11 @@ public class selenideTest { //https://www.browserstack.com/guide/difference-betw
     }
 
     @Test
-    public void GoogleHome() throws InterruptedException {
-        open("https://google.com");
+    void testWithRemoteFirefox(RemoteWebDriver driver) throws InterruptedException {
+        // use remote Firefox in this test
+        open("https://google.com/");
         $(By.name("q")).val("selenide").pressEnter();
         $$("#res .g").shouldHave(sizeGreaterThan(1));
-        Thread.sleep(3000);
-    }
-    @Test
-    public void GoogleHome1() throws InterruptedException {
-        open("https://google.com");
-        $(By.name("q")).val("selenide").pressEnter();
-        $$("#res .g").shouldHave(sizeGreaterThan(1));
-        Thread.sleep(3000);
+        Thread.sleep(4000);
     }
 }
